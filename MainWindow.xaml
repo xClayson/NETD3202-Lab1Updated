@@ -1,0 +1,52 @@
+﻿<Window x:Class="NETD3202_Lab1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NETD3202_Lab1"
+        mc:Ignorable="d"
+        Title="CODE IT INC." Height="500" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+      <!--Beginning of StackPanel. Column 0-->
+        <StackPanel  Grid.Column="0" Margin="50">
+            <!--Label/Textbox for Project Name-->
+            <Label x:Name="lblProjectName" Content="_Project Name:" Target="{Binding ElementName=txtProjectName}"/>
+            <TextBox x:Name="txtProjectName" />
+            <!--Label/Textbox for Budget-->
+            <Label x:Name="lblBudget" Content="_Budget:" Target="{Binding ElementName=txtBudget}"></Label>
+            <TextBox x:Name="txtBudget" />
+            <!--Label/Textbox for Spent-->
+            <Label x:Name="lblSpent" Content="_Spent:" Target="{Binding ElementName=txtSpent}"></Label>
+            <TextBox x:Name="txtSpent" />
+            <!--Label/Textbox for Est Hours Remaining-->
+            <Label x:Name="lblEstHoursRemaining" Content="_Est Hours Remaining:" Target="{Binding ElementName=txtEstHoursRemaining}"></Label>
+            <TextBox x:Name="txtEstHoursRemaining" />
+            <!--Label/ComboBox for Status-->
+            <Label x:Name="lblStatus" Content="_Status:" Target="{Binding ElementName=cmbStatus}"></Label>
+            <ComboBox x:Name="cmbStatus">
+              <!--List of all ComboBox Items-->
+                <ComboBoxItem x:Name ="cmbRequirements" IsSelected="True" Content="Requirements"/>
+                <ComboBoxItem x:Name ="cmbDesign" Content="Design"/>
+                <ComboBoxItem x:Name ="cmbImplementation" Content="Implementation"/>
+                <ComboBoxItem x:Name ="cmbTesting" Content="Testing"/>
+                <ComboBoxItem x:Name ="cmbDeployment" Content="Deployment"/>
+                <ComboBoxItem x:Name ="cmbCompleted" Content="Completed"/>
+            </ComboBox>
+            <!--Button to create project records-->
+            <Button x:Name="btnCreateProject" Content="_Create Project" Margin="50" Background="AliceBlue" Click="btnCreateProject_Click"/>
+
+        </StackPanel>
+        <!--End of StackPanel. Column 0-->
+
+        <!--Beginning of 2nd StackPanel. Column 1-->
+        <StackPanel Grid.Column="1" Margin="50" >
+            <!--List Box which shows projects created-->
+            <ListBox Name="lstProjects" Margin="50" Background="AliceBlue" MouseDoubleClick="lstProjects_MouseDoubleClick" DisplayMemberPath="ProjectName"/>
+        </StackPanel>
+        <!--End of StackPanel. Column 1-->
+    </Grid>
+</Window>

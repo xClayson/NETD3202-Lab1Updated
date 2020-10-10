@@ -1,0 +1,45 @@
+﻿<Window x:Class="NETD3202_Lab1.SecondWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NETD3202_Lab1"
+        mc:Ignorable="d"
+        Title="CODE IT INC." Height="450" Width="600">
+  <!-- Start of grid-->
+  <Grid>
+    <!-- Start of stack panel-->
+        <StackPanel Margin="20">
+          <!--Label/Textbox for Project Name. Changed variable names accordingly-->
+          <Label x:Name="lblProjectNameEdit" Content="_Project Name:" Target="{Binding ElementName=txtProjectName}"/>
+          <TextBox x:Name="txtProjectNameEdit" IsEnabled="True"/>
+          <!--Label/Textbox for Budget. Changed variable names accordingly-->
+          <Label x:Name="lblBudgetEdit" Content="_Budget:" Target="{Binding ElementName=txtBudget}"></Label>
+          <TextBox x:Name="txtBudgetEdit" IsEnabled="True"/>
+          <!--Label/Textbox for Spent Changed variable names accordingly-->
+          <Label x:Name="lblSpentEdit" Content="_Spent:" Target="{Binding ElementName=txtSpent}"></Label>
+          <TextBox x:Name="txtSpentEdit" IsEnabled="True"/>
+          <!--Label/Textbox for Est Hours Remaining. Changed variable names accordingly-->
+          <Label x:Name="lblEstHoursRemainingEdit" Content="_Est Hours Remaining:" Target="{Binding ElementName=txtEstHoursRemaining}"></Label>
+          <TextBox x:Name="txtEstHoursRemainingEdit" IsEnabled="True" />
+          <!--Label/ComboBox for Status. Changed variable names accordingly-->
+          <Label x:Name="lblStatusEdit" Content="_Status:" Target="{Binding ElementName=cmbStatus}"></Label>
+          <ComboBox x:Name="cmbStatusEdit" IsEnabled="True">
+            <!--List of all ComboBox Items. Changed variable names accordingly-->
+            <ComboBoxItem x:Name ="cmbRequirementsEdit" IsSelected="True" Content="Requirements"/>
+            <ComboBoxItem x:Name ="cmbDesignEdit" Content="Design"/>
+            <ComboBoxItem x:Name ="cmbImplementationEdit" Content="Implementation"/>
+            <ComboBoxItem x:Name ="cmbTestingEdit" Content="Testing"/>
+            <ComboBoxItem x:Name ="cmbDeploymentEdit" Content="Deployment"/>
+            <ComboBoxItem x:Name ="cmbCompletedEdit" Content="Completed"/>
+          </ComboBox>
+          <!-- Button to Alter project-->
+            <Button x:Name="btnAlterProject" Content="_Alter" Margin="20" HorizontalAlignment="Stretch" Width="200" IsEnabled="True" Click="btnAlterProject_Click" />
+          <!-- Button to Close window-->
+            <Button x:Name="btnCloseWindow" Content="_Close Window" Margin="20" HorizontalAlignment="Stretch" Width="150" Click="btnCloseWindow_Click"/>
+          <!-- End of Stack Panel-->
+        </StackPanel>
+    <!-- End of Grid-->
+    </Grid>
+  <!-- Button to Close window-->
+</Window>
