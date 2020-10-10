@@ -15,16 +15,16 @@
         <StackPanel  Grid.Column="0" Margin="50">
             <!--Label/Textbox for Project Name-->
             <Label x:Name="lblProjectName" Content="_Project Name:" Target="{Binding ElementName=txtProjectName}"/>
-            <TextBox x:Name="txtProjectName" />
+            <TextBox x:Name="txtProjectName" ToolTip="Enter a project name"/>
             <!--Label/Textbox for Budget-->
             <Label x:Name="lblBudget" Content="_Budget:" Target="{Binding ElementName=txtBudget}"></Label>
-            <TextBox x:Name="txtBudget" />
+            <TextBox x:Name="txtBudget" ToolTip="Enter budget of project" />
             <!--Label/Textbox for Spent-->
             <Label x:Name="lblSpent" Content="_Spent:" Target="{Binding ElementName=txtSpent}"></Label>
-            <TextBox x:Name="txtSpent" />
+            <TextBox x:Name="txtSpent" ToolTip="Enter amount spent" />
             <!--Label/Textbox for Est Hours Remaining-->
             <Label x:Name="lblEstHoursRemaining" Content="_Est Hours Remaining:" Target="{Binding ElementName=txtEstHoursRemaining}"></Label>
-            <TextBox x:Name="txtEstHoursRemaining" />
+            <TextBox x:Name="txtEstHoursRemaining" ToolTip="Enter hours" />
             <!--Label/ComboBox for Status-->
             <Label x:Name="lblStatus" Content="_Status:" Target="{Binding ElementName=cmbStatus}"></Label>
             <ComboBox x:Name="cmbStatus">
@@ -37,7 +37,7 @@
                 <ComboBoxItem x:Name ="cmbCompleted" Content="Completed"/>
             </ComboBox>
             <!--Button to create project records-->
-            <Button x:Name="btnCreateProject" Content="_Create Project" Margin="50" Background="AliceBlue" Click="btnCreateProject_Click"/>
+            <Button x:Name="btnCreateProject" Content="_Create Project" Margin="50" Background="AliceBlue" ToolTip="Click to Create Project" Click="btnCreateProject_Click"/>
 
         </StackPanel>
         <!--End of StackPanel. Column 0-->

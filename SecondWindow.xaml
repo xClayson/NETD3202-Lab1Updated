@@ -12,19 +12,19 @@
         <StackPanel Margin="20">
           <!--Label/Textbox for Project Name. Changed variable names accordingly-->
           <Label x:Name="lblProjectNameEdit" Content="_Project Name:" Target="{Binding ElementName=txtProjectName}"/>
-          <TextBox x:Name="txtProjectNameEdit" IsEnabled="True"/>
+            <TextBox x:Name="txtProjectNameEdit" ToolTip="Edit project name"/>
           <!--Label/Textbox for Budget. Changed variable names accordingly-->
           <Label x:Name="lblBudgetEdit" Content="_Budget:" Target="{Binding ElementName=txtBudget}"></Label>
-          <TextBox x:Name="txtBudgetEdit" IsEnabled="True"/>
+            <TextBox x:Name="txtBudgetEdit" ToolTip="Edit budget"/>
           <!--Label/Textbox for Spent Changed variable names accordingly-->
           <Label x:Name="lblSpentEdit" Content="_Spent:" Target="{Binding ElementName=txtSpent}"></Label>
-          <TextBox x:Name="txtSpentEdit" IsEnabled="True"/>
+            <TextBox x:Name="txtSpentEdit" ToolTip="Edit Amount Spent"/>
           <!--Label/Textbox for Est Hours Remaining. Changed variable names accordingly-->
           <Label x:Name="lblEstHoursRemainingEdit" Content="_Est Hours Remaining:" Target="{Binding ElementName=txtEstHoursRemaining}"></Label>
-          <TextBox x:Name="txtEstHoursRemainingEdit" IsEnabled="True" />
+            <TextBox x:Name="txtEstHoursRemainingEdit" ToolTip="Edit hours remaining" />
           <!--Label/ComboBox for Status. Changed variable names accordingly-->
           <Label x:Name="lblStatusEdit" Content="_Status:" Target="{Binding ElementName=cmbStatus}"></Label>
-          <ComboBox x:Name="cmbStatusEdit" IsEnabled="True">
+          <ComboBox x:Name="cmbStatusEdit">
             <!--List of all ComboBox Items. Changed variable names accordingly-->
             <ComboBoxItem x:Name ="cmbRequirementsEdit" IsSelected="True" Content="Requirements"/>
             <ComboBoxItem x:Name ="cmbDesignEdit" Content="Design"/>
@@ -34,9 +34,9 @@
             <ComboBoxItem x:Name ="cmbCompletedEdit" Content="Completed"/>
           </ComboBox>
           <!-- Button to Alter project-->
-            <Button x:Name="btnAlterProject" Content="_Alter" Margin="20" HorizontalAlignment="Stretch" Width="200" IsEnabled="True" Click="btnAlterProject_Click" />
+            <Button x:Name="btnAlterProject" Content="_Alter" Margin="20" HorizontalAlignment="Stretch" Width="200" Background="AliceBlue" ToolTip="Click to save edit's" Click="btnAlterProject_Click" />
           <!-- Button to Close window-->
-            <Button x:Name="btnCloseWindow" Content="_Close Window" Margin="20" HorizontalAlignment="Stretch" Width="150" Click="btnCloseWindow_Click"/>
+            <Button x:Name="btnCloseWindow" Content="_Close Window" Margin="20" HorizontalAlignment="Stretch" Width="150" Background="AliceBlue" ToolTip="Click to close window" Click="btnCloseWindow_Click"/>
           <!-- End of Stack Panel-->
         </StackPanel>
     <!-- End of Grid-->
