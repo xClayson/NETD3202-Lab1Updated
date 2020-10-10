@@ -115,12 +115,15 @@ namespace NETD3202_Lab1
                                     else
                                     {
                                         MessageBox.Show("Hours Remaining must be greater than 0.");
+                                        txtEstHoursRemaining.Text = "";
+                                        txtEstHoursRemaining.Focus();
                                     }
                                 }
                                 else
                                 {
                                     //Amount Spent is less than 0
                                     MessageBox.Show("Amount Spent must be greater than 0.");
+                                    txtSpent.Text = "";
                                     txtSpent.Focus();
                                 }
                             }
@@ -128,6 +131,7 @@ namespace NETD3202_Lab1
                             {
                                 //Budget is less than 0
                                 MessageBox.Show("Budget must be greater than 0.");
+                                txtBudget.Text = "";
                                 txtBudget.Focus();
                             }
                         }
